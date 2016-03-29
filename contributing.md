@@ -1,13 +1,13 @@
 # Contributing
-The Simpla elements are open-source under the MIT license. If you'd like to contribute, please head to our GitHub repositories and dive in!
+The Simpla elements are open-source under the MIT license. If you'd like to contribute, please head over to our GitHub repositories and dive in!
 
-- [github.com/simplaio/simpla][simplaio/simpla] is the entrypoint to Simpla's open-source ecosystem and the package that is used to install the core Simpla elements locally with Bower.
+**[github.com/simplaio/simpla][simplaio/simpla]** is the entrypoint to Simpla's open-source ecosystem and the package that is used to install the core Simpla elements locally with Bower.
 
-- [github.com/SimplaElements][SimplaElements] is Simpla's element catalogue, and contains the components themselves. These elements are hosted on [elements.simpla.io][elements]
+**[github.com/SimplaElements][SimplaElements]** is Simpla's element catalogue. These elements are hosted on [elements.simpla.io][elements]
 
-- [github.com/simplaio][simplaio] hosts Simla's supporting repos, like development tools and the aforementioned `simpla` Bower installer.
+**[github.com/simplaio][simplaio]** hosts Simpla's supporting repositories, like development tools and the aforementioned `simpla` Bower installer.
 
-**Note:** We're currently in the process of migrating Simpla's elements from _simplaio_ to the new _SimplaElements_ organisaion.
+**Note:** We are currently in the process of migrating Simpla's elements from _simplaio_ to the new _SimplaElements_ organization.
 
 [simplaio/simpla]: https://github.com/simplaio/simpla
 [SimplaElements]: https://github.com/SimplaElements
@@ -15,7 +15,7 @@ The Simpla elements are open-source under the MIT license. If you'd like to cont
 [elements]: https://elements.simpla.io
 
 ## The element catalogue <a is="populate-menu" anchor="catalogue" menu-item="The element catalogue" target="#contributing">#</a>
-Simpla's elements function independently, talking to other elements in the ecosystem in a decentralized manner. There a lot of components that make up Simpla, and we've adopted a simple taxonomy to organize them by.
+Simpla's elements function independently, talking to other elements in the ecosystem in a decentralized manner. There are a lot of components that make up Simpla, and we've adopted a simple taxonomy to organize them by.
 
 ## Simpla content elements <a is="populate-menu" anchor="simpla-elements" menu-item="Simpla elements" target="#contributing">#</a>
 These are the new dynamic HTML elements themselves, use them in your markup to create editable content.
