@@ -37,6 +37,7 @@ All Simpla elements require a unique ID to identify their content in your projec
 <simpla-text sid="my-text"></simpla-text>
 <simpla-img sid="my-img"></simpla-img>
 ```
+<!-- {is="syntax-highlight"} -->
 
 Read [structuring data](#structuring-data) to learn more about how to scope and structure content in your project.
 
@@ -47,11 +48,13 @@ This is valid
 ```html
 <simpla-text sid="text"></simpla-text>
 ```
+<!-- {is="syntax-highlight"} -->
 
 This is not
 ```html
 <simpla-text sid="text" />
 ```
+<!-- {is="syntax-highlight"} -->
 
 And the markup inside this won't get output
 ```html
@@ -59,6 +62,7 @@ And the markup inside this won't get output
   <span>Some text</span>
 </simpla-text>
 ```
+<!-- {is="syntax-highlight"} -->
 
 ## Editable text <a is="populate-menu" anchor="text" menu-item="Editable text" target="#developing">#</a>
 `<simpla-text>` contains editable rich-text. You can use it as a standalone container (containing paragraphs of text) or as the content inside other textual elements (eg: headings).
@@ -68,6 +72,7 @@ And the markup inside this won't get output
 
 <h1><simpla-text sid="text-content"></simpla-text></h1>
 ```
+<!-- {is="syntax-highlight"} -->
 
 <simpla-text sid="example" class="simpla-example"></simpla-text>
 
@@ -83,6 +88,7 @@ The mode is set automatically based on context. You can force a mode by adding a
 
 <simpla-text sid="block-text" block></simpla-text>
 ```
+<!-- {is="syntax-highlight"} -->
 
 Note that forcing block mode when simpla-text is used inside textual elements like headings will produce invalid markup and could result in unexpected behavior.
 
@@ -92,6 +98,7 @@ Simpla-text shows a placeholder in edit mode when it has no content. You can cha
 ```html
 <simpla-text sid="title" placeholder="Enter a title..."></simpla-text>
 ```
+<!-- {is="syntax-highlight"} -->
 
 <simpla-text sid="example" class="simpla-example" placeholder="Enter a title..."></simpla-text>
 
@@ -101,6 +108,7 @@ Simpla-text shows a placeholder in edit mode when it has no content. You can cha
 ```html
 <simpla-img sid="editable-img"></simpla-img>
 ```
+<!-- {is="syntax-highlight"} -->
 
 <simpla-img sid="example" class="simpla-example"></simpla-img>
 
@@ -120,6 +128,8 @@ Simpla-img shows a placeholder in edit mode when it has no content. You can chan
 <simpla-img sid="placeholder-3" placeholder="pink"></simpla-img>
 
 ```
+<!-- {is="syntax-highlight"} -->
+
 <div class="simpla-example">
   <simpla-img sid="example" placeholder="http://placekitten.com/g/600/400"></simpla-img>
   <simpla-img sid="example" placeholder="#64d8e8"></simpla-img>
@@ -134,6 +144,7 @@ You can force a simpla-img to always pop into view when editing with the `popout
 ```html
 <simpla-img sid="always-popout" popout></simpla-img>
 ```
+<!-- {is="syntax-highlight"} -->
 
 ## Default content
 You can provide starting content for Simpla elements with default content. Default content is shown when a Simpla element cannot fetch data, ie: when you have yet to save content for it. If an element has content saved in your project, its default content is not used. An element's default content is never 'updated' by Simpla.
@@ -153,6 +164,7 @@ To provide default content to simpla-text specify HTML rich-text in either inter
 </simpla-text>
 
 ```
+<!-- {is="syntax-highlight"} -->
 
 <simpla-text sid="example" class="simpla-example" default="<p>Lorem ipsum dolor sit amet</p>"></simpla-text>
 
@@ -162,6 +174,7 @@ To provide default content to simpla-img specify a path to an image in the `defa
 ```html
 <simpla-img sid="default" default="/path/to/img.jpg"></simpla-img>
 ```
+<!-- {is="syntax-highlight"} -->
 
 <simpla-img sid="example" class="simpla-example" default="/path/to/img.jpg"></simpla-img>
 
@@ -181,6 +194,7 @@ The most basic unit in structuring Simpla data is the content ID. All Simpla ele
 <simpla-text sid="my-text"></simpla-text>
 <simpla-img sid="my-img"></simpla-img>
 ```
+<!-- {is="syntax-highlight"} -->
 
 A content ID can be any string that doesn't contain spaces or periods (`.`), since Simpla uses periods internally to represent data hierarchies.
 
@@ -199,6 +213,7 @@ In the following example, both `<simpla-text>` elements with an SID of 'foo' con
 
 </simpla-block>
 ```
+<!-- {is="syntax-highlight"} -->
 
 You can infinitely nest simpla-blocks to create complex data structures
 
@@ -223,8 +238,8 @@ You can infinitely nest simpla-blocks to create complex data structures
   </simpla-block>
 
 </simpla-block>
-
 ```
+<!-- {is="syntax-highlight"} -->
 
 ### Making data global
 Simpla elements that use an SID are scoped to simpla-blocks. You can break out of a block and place an element in the global scope by using a Global ID instead, specified in the `gid` attribute.
@@ -232,6 +247,7 @@ Simpla elements that use an SID are scoped to simpla-blocks. You can break out o
 ```html
 <simpla-text gid="global-content"></simpla-text>
 ```
+<!-- {is="syntax-highlight"} -->
 
 Elements with a GID ignore simpla-block namespaces, and are accessible anywhere in your project.
 
@@ -247,6 +263,7 @@ In the following example, both `<simpla-text>` elements with a GID of 'foo' poin
 
 </simpla-block>
 ```
+<!-- {is="syntax-highlight"} -->
 
 Simpla-blocks can use GIDs as well, to create globally unique namespaces.
 
@@ -263,6 +280,7 @@ Simpla-blocks can use GIDs as well, to create globally unique namespaces.
 
 </simpla-block>
 ```
+<!-- {is="syntax-highlight"} -->
 
 If a Simpla element has both an SID and GID, the GID takes precedence.
 
@@ -279,6 +297,7 @@ To achieve this you can place an `sid` on the `<body>` of your page, which creat
   ...
 </body>
 ```
+<!-- {is="syntax-highlight"} -->
 
 ### Dynamically changing data
 Whenever the content ID of a Simpla element changes it re-fetches its data. And since an element's content is determined by the namespace it lives in (if it uses an SID), you can swap whole sections or pages of content by changing the ID of its surrounding namespace.
@@ -295,6 +314,7 @@ For example, you could use `<simpla-block>` to create a frontend blog
 
 </simpla-block>
 ```
+<!-- {is="syntax-highlight"} -->
 
 Or change page namespaces with JavaScript for single page apps
 
@@ -304,6 +324,7 @@ Or change page namespaces with JavaScript for single page apps
   ...
 </body>
 ```
+<!-- {is="syntax-highlight"} -->
 
 Or provide localized versions your content with frontend geolocation
 
@@ -313,6 +334,7 @@ Or provide localized versions your content with frontend geolocation
  ...
 </body>
 ```
+<!-- {is="syntax-highlight"} -->
 
 ## Browser support <a is="populate-menu" anchor="browser-support" menu-item="Browser support" target="#developing">#</a>
 Simpla supports all modern browsers:

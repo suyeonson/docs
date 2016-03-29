@@ -14,6 +14,7 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 
 </simpla-block>
 ```
+<!-- {is="syntax-highlight"} -->
 
 | Attribute | Type   | Expects                                | Default Value | Description                                                                    |
 |:----------|:-------|:---------------------------------------|:--------------|:-------------------------------------------------------------------------------|
@@ -26,6 +27,7 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 ```html
 <simpla-text sid="text"></simpla-text>
 ```
+<!-- {is="syntax-highlight"} -->
 
 <simpla-text sid="example" class="simpla-example"></simpla-text>
 
@@ -44,6 +46,7 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 ```html
 <simpla-img sid="img"></simpla-img>
 ```
+<!-- {is="syntax-highlight"} -->
 
 <simpla-img sid="example" class="simpla-example"></simpla-img>
 
