@@ -339,15 +339,26 @@ Or provide localized versions your content with frontend geolocation
 ## Browser support <a is="populate-menu" anchor="browser-support" menu-item="Browser support" target="#developing">#</a>
 Simpla supports all modern browsers:
 
-| Chrome   | IE           | Edge         | Firefox      | Safari       | Opera       | Mobile Safari |
-|:--------:|:------------:|:------------:|:------------:|:------------:|:-----------:|:-----------:|
-| Current  | 10+          | Current      | Current      | 7+           | Current     | Current     |
+| Browser       | Supported Version |
+|:--------------|:------------------|
+| Chrome        | Current           |
+| IE            | 10+               |
+| Edge          | Current           |
+| Firefox       | Current           |
+| Safari        | 7+                |
+| Opera         | Current           |
+| Safari Mobile | Current           |
 
 In more detail, Simpla uses an emerging family of specifications called [Web Components](https://www.w3.org/wiki/WebComponents/). The technology behind Web Components is being actively developed by all major browser vendors - currently Google Chrome has full support, while other browsers have partial support and require polyfills (additional code that provides missing features).
 
 In practice this just means Simpla currently enjoys native-level performance in Chrome, and performance similar to other leading javascript libraries in other browsers.
 
-| Chrome   | IE           | Edge         | Firefox      | Safari       | Opera       | Mobile Safari |
-|:--------:|:------------:|:------------:|:------------:|:------------:|:-----------:|:-----------:|
-| Current  | 10+          | Current      | Current      | 7+           | Current     | Current     |
-| _Native_ | _Polyfilled_ | _Polyfilled_ | _Polyfilled_ | _Polyfilled_ | _Native_    |  _Polyfilled_    |  
+| Browser       | Supported Version | Method   |
+|:--------------|:------------------|:---------|
+| Chrome        | Current           | Native   |
+| IE            | 10+               | Polyfill |
+| Edge          | Current           | Polyfill |
+| Firefox       | Current           | Polyfill |
+| Safari        | 7+                | Polyfill |
+| Opera         | Current           | Native   |
+| Safari Mobile | Current           | Polyfill |

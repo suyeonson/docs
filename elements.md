@@ -16,10 +16,20 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 ```
 <!-- {is="syntax-highlight"} -->
 
-| Attribute | Type   | Expects                                | Default Value | Description                                                                    |
-|:----------|:-------|:---------------------------------------|:--------------|:-------------------------------------------------------------------------------|
-| `sid`     | String | ID name without spaces or periods (`.`) | `undefined`   | ID used to identify Simpla content, scoped relative to Simpla parents |
-| `gid`     | String | ID name without spaces or periods (`.`) | `undefined`   | Globally unique ID used to identify Simpla content, ignores Simpla parents                           |
+| Attribute:    | `sid`                                                                  |
+|:--------------|:-----------------------------------------------------------------------|
+| Type          | String                                                                 |
+| Expects       | ID name without spaces or periods (`.`)                                |
+| Default       | `undefined`                                                            |
+| Description   | ID used to identify block namespace, scoped relative to Simpla parents |
+
+
+| Attribute:    | `gid`                                                                       |
+|:--------------|:----------------------------------------------------------------------------|
+| Type          | String                                                                      |
+| Expects       | ID name without spaces or periods (`.`)                                     |
+| Default       | `undefined`                                                                 |
+| Description   | Globally unique ID used to identify block namespace, ignores Simpla parents |
 
 ## Simpla Text <a is="populate-menu" anchor="simpla-text" menu-item="Simpla Text" target="#elements">#</a>
 `<simpla-text>` contains editable rich-text.
@@ -31,14 +41,48 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 
 <simpla-text sid="example" class="simpla-example"></simpla-text>
 
-| Attribute     | Type    | Expects                                | Default Value          | Description                                                                      |
-|:--------------|:--------|:---------------------------------------|:-----------------------|:---------------------------------------------------------------------------------|
-| `sid`         | String  | ID name without spaces or periods (`.`) | `undefined`            | ID used to identify Simpla content, scoped relative to Simpla parents |
-| `gid`         | String  | ID name without spaces or periods (`.`) | `undefined`            | Globally unique ID used to identify Simpla content, ignores Simpla parents |
-| `placeholder` | String  | Plaintext                              | `'Enter your text...'` | Shown in edit mode when simpla-text is empty                             |
-| `default`     | String  | Any valid HTML string                  | `''`                   | Output when simpla-text cannot fetch data, mostly used as starting content       |
-| `block`       | Boolean | N/A                                    | `true` / `false`       | If true, new lines create paragraphs. Defaults to true/false based on context    |
-| `inline`      | Boolean | N/A                                    | `true` / `false`       | If true, new lines create line breaks. Defaults to true/false based on context   |
+| Attribute:    | `sid`                                                                 |
+|:--------------|:----------------------------------------------------------------------|
+| Type          | String                                                                |
+| Expects       | ID name without spaces or periods (`.`)                               |
+| Default       | `undefined`                                                           |
+| Description   | ID used to identify Simpla content, scoped relative to Simpla parents |
+
+
+| Attribute:    | `gid`                                                                      |
+|:--------------|:---------------------------------------------------------------------------|
+| Type          | String                                                                     |
+| Expects       | ID name without spaces or periods (`.`)                                    |
+| Default       | `undefined`                                                                |
+| Description   | Globally unique ID used to identify Simpla content, ignores Simpla parents |
+
+| Attribute:    | `placeholder`                                |
+|:--------------|:---------------------------------------------|
+| Type          | String                                       |
+| Expects       | Plaintext                                    |
+| Default       | `'Enter your text...'`                       |
+| Description   | Shown in edit mode when simpla-text is empty |
+
+| Attribute:    | `default`                                                                  |
+|:--------------|:---------------------------------------------------------------------------|
+| Type          | String                                                                     |
+| Expects       | Any valid HTML string                                                      |
+| Default       | `''`                                                                       |
+| Description   | Output when simpla-text cannot fetch data, mostly used as starting content |
+
+| Attribute:    | `block`                                                                               |
+|:--------------|:--------------------------------------------------------------------------------------|
+| Type          | Boolean                                                                               |
+| Expects       | N/A                                                                                   |
+| Default       | `true` / `false`                                                                      |
+| Description   | If true, new lines create paragraphs. Defaults to true/false based on context       | |
+
+| Attribute:    | `inline`                                                                       |
+|:--------------|:-------------------------------------------------------------------------------|
+| Type          | Boolean                                                                        |
+| Expects       | N/A                                                                            |
+| Default       | `true` / `false`                                                               |
+| Description   | If true, new lines create line breaks. Defaults to true/false based on context |
 
 ## Simpla Img <a is="populate-menu" anchor="simpla-img" menu-item="Simpla Img" target="#elements">#</a>
 `<simpla-img>` is an editable image.
@@ -50,10 +94,37 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 
 <simpla-img sid="example" class="simpla-example"></simpla-img>
 
-| Attribute     | Type    | Expects                                        | Default Value      | Description                                                                      |
-|:--------------|:--------|:-----------------------------------------------|:-------------------|:---------------------------------------------------------------------------------|
-| `sid`         | String  | ID name without spaces or periods (`.`)         | `undefined`        | ID used to identify Simpla content, scoped relative to Simpla parents   |
-| `gid`         | String  | ID name without spaces or periods (`.`)         | `undefined`        | Globally unique ID used to identify Simpla content, ignores Simpla parents |
-| `placeholder` | String  | Path to an image, or any valid CSS color value | `rgb(180,180,180)` | Shown in edit mode when simpla-img is empty.                             |
-| `default`     | String  | Path to an image                               | `''`               | Output when simpla-img cannot fetch data, mostly used as starting content        |
-| `popout`      | Boolean | N/A                                            | `false`            | Force simpla-img to always 'pop' out of place when clicked in edit mode          |
+| Attribute:    | `sid`                                                                 |
+|:--------------|:----------------------------------------------------------------------|
+| Type          | String                                                                |
+| Expects       | ID name without spaces or periods (`.`)                               |
+| Default       | `undefined`                                                           |
+| Description   | ID used to identify Simpla content, scoped relative to Simpla parents |
+
+| Attribute:    | `gid`                                                                      |
+|:--------------|:---------------------------------------------------------------------------|
+| Type          | String                                                                     |
+| Expects       | ID name without spaces or periods (`.`)                                    |
+| Default       | `undefined`                                                                |
+| Description   | Globally unique ID used to identify Simpla content, ignores Simpla parents |
+
+| Attribute:    | `placeholder`                                  |
+|:--------------|:-----------------------------------------------|
+| Type          | String                                         |
+| Expects       | Path to an image, or any valid CSS color value |
+| Default       | `rgb(180,180,180)`                             |
+| Description   | Shown in edit mode when simpla-img is empty    |
+
+| Attribute:    | `default`                                                                 |
+|:--------------|:--------------------------------------------------------------------------|
+| Type          | String                                                                    |
+| Expects       | Path to an image                                                          |
+| Default       | `''`                                                                      |
+| Description   | Output when simpla-img cannot fetch data, mostly used as starting content |
+
+| Attribute:    | `popout`                                                                |
+|:--------------|:------------------------------------------------------------------------|
+| Type          | Boolean                                                                 |
+| Expects       | N/A                                                                     |
+| Default       | `false`                                                                 |
+| Description   | Force simpla-img to always 'pop' out of place when clicked in edit mode |
