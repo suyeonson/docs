@@ -1,7 +1,7 @@
 # Elements Reference
 This is a reference guide for Simpla's user-facing content elements. There are many more internally used components within the Simpla ecosystem, refer to the [Contributing](contributing) guide to learn more about them.
 
-## Simpla Block <a is="populate-menu" anchor="simpla-text" menu-item="Simpla Block" target="#elements">#</a>
+## Simpla Block <a is="populate-menu" anchor="simpla-block" menu-item="Simpla Block" target="#elements">#</a>
 `<simpla-block>` helps structure your project by creating namespaces. Any Simpla element with an `sid` inside a simpla-block is scoped to that block.
 
 ```html
