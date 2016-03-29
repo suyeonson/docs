@@ -78,7 +78,9 @@ And the markup inside this won't get output
 
 ### Inline vs. block mode
 Simpla-text has two content structuring modes:
+
 1. Block mode - new line creates `<p>`.
+
 2. Inline mode - new line creates `<br/>`.
 
 The mode is set automatically based on context. You can force a mode by adding a `block` or `inline` attribute to a `<simpla-text>` element.
@@ -156,13 +158,15 @@ To provide default content to simpla-text specify HTML rich-text in either inter
 
 ```html
 <simpla-text sid="default" default="<p>Lorem ipsum dolor sit amet.</p>"></simpla-text>
+```
+<!-- {is="syntax-highlight"} -->
 
+```html
 <simpla-text sid="default">
   <default-content>
     <p>Lorem ipsum dolor sit amet.</p>
   </default-content>
 </simpla-text>
-
 ```
 <!-- {is="syntax-highlight"} -->
 
@@ -188,7 +192,7 @@ Default content can also act as an emergency fallback for Simpla elements. If Si
 With Simpla your code determines the structure of your data, rather than the other way around. With a few simple tools you can create powerful data structures directly in your markup.
 
 ### Content IDs
-The most basic unit in structuring Simpla data is the content ID. All Simpla elements require a unique ID to identify their content in your project. In most cases you'll want to specify this ID in an `sid` (Simpla ID) attribute on the element.
+The most basic unit in structuring Simpla data is the Content ID. All Simpla elements require a unique ID to identify their content in your project. In most cases you'll want to specify this ID in an `sid` (Simpla ID) attribute on the element.
 
 ```html
 <simpla-text sid="my-text"></simpla-text>
@@ -196,10 +200,10 @@ The most basic unit in structuring Simpla data is the content ID. All Simpla ele
 ```
 <!-- {is="syntax-highlight"} -->
 
-A content ID can be any string that doesn't contain spaces or periods (`.`), since Simpla uses periods internally to represent data hierarchies.
+A Content ID can be any string that doesn't contain spaces or periods (`.`), since Simpla uses periods internally to represent data hierarchies.
 
 ### Creating namespaces
-You can create a new _namespace_ for Simpla content with the `<simpla-block>` element. The Simpla elements inside a `<simpla-block>` are scoped to that block, ensuring that their content is unique. Like other Simpla elements, `<simpla-block>` requires a content ID to identify the namespace it creates.
+You can create a new _namespace_ for Simpla content with the `<simpla-block>` element. The Simpla elements inside a `<simpla-block>` are scoped to that block, ensuring that their content is unique. Like other Simpla elements, `<simpla-block>` requires a Content ID to identify the namespace it creates.
 
 In the following example, both `<simpla-text>` elements with an SID of 'foo' contain unique content, thanks to simpla-block:
 
@@ -273,7 +277,8 @@ Simpla-blocks can use GIDs as well, to create globally unique namespaces.
 </simpla-block>
 
 <simpla-block sid="block">
-
+  
+  <!-- This 'global-block' has the same data as the other 'global-block' -->
   <simpla-block gid="global-block">
     <simpla-text sid="foo"></simpla-text>
   </simpla-block>
@@ -287,7 +292,7 @@ If a Simpla element has both an SID and GID, the GID takes precedence.
 ### Scoping whole pages
 Any Simpla element that is not inside a simpla-block is by default in the global scope. This usually isn't desirable when working with multiple pages, where the elements on each page should be scoped to that page.
 
-To achieve this you can place an `sid` on the `<body>` of your page, which creates a new namespace for that page, equivalent to wrapping the entire page in a `<simpla-block>`.
+To achieve this you can place an `sid` on the `<body>` element, which creates a new namespace for the whole document, equivalent to wrapping your entire page in a `<simpla-block>`.
 
 ```html
 <body sid="page-id">
@@ -300,7 +305,7 @@ To achieve this you can place an `sid` on the `<body>` of your page, which creat
 <!-- {is="syntax-highlight"} -->
 
 ### Dynamically changing data
-Whenever the content ID of a Simpla element changes it re-fetches its data. And since an element's content is determined by the namespace it lives in (if it uses an SID), you can swap whole sections or pages of content by changing the ID of its surrounding namespace.
+Whenever the Content ID of a Simpla element changes it re-fetches its data. And since an element's content is determined by the namespace it lives in (if it uses an SID), you can swap whole sections of content by changing the ID of its surrounding namespace.
 
 For example, you could use `<simpla-block>` to create a frontend blog
 
