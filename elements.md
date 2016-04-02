@@ -63,26 +63,12 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 | Default       | `'Enter your text...'`                       |
 | Description   | Shown in edit mode when simpla-text is empty |
 
-| Attribute:    | `default`                                                                  |
-|:--------------|:---------------------------------------------------------------------------|
-| Type          | String                                                                     |
-| Expects       | Any valid HTML string                                                      |
-| Default       | `''`                                                                       |
-| Description   | Output when simpla-text cannot fetch data, mostly used as starting content |
-
-| Attribute:    | `block`                                                                               |
-|:--------------|:--------------------------------------------------------------------------------------|
-| Type          | Boolean                                                                               |
-| Expects       | N/A                                                                                   |
-| Default       | `true` / `false`                                                                      |
-| Description   | If true, new lines create paragraphs. Defaults to true/false based on context       | |
-
 | Attribute:    | `inline`                                                                       |
 |:--------------|:-------------------------------------------------------------------------------|
 | Type          | Boolean                                                                        |
 | Expects       | N/A                                                                            |
 | Default       | `true` / `false`                                                               |
-| Description   | If true, new lines create line breaks. Defaults to true/false based on context |
+| Description   | If true, new lines create line-breaks instead of paragraphs. Defaults to true/false based on context |
 
 ## Simpla Img <a is="populate-menu" anchor="simpla-img" menu-item="Simpla Img" target="#elements">#</a>
 `<simpla-img>` is an editable image.
@@ -114,13 +100,6 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 | Expects       | Path to an image, or any valid CSS color value |
 | Default       | `rgb(180,180,180)`                             |
 | Description   | Shown in edit mode when simpla-img is empty    |
-
-| Attribute:    | `default`                                                                 |
-|:--------------|:--------------------------------------------------------------------------|
-| Type          | String                                                                    |
-| Expects       | Path to an image                                                          |
-| Default       | `''`                                                                      |
-| Description   | Output when simpla-img cannot fetch data, mostly used as starting content |
 
 | Attribute:    | `popout`                                                                |
 |:--------------|:------------------------------------------------------------------------|

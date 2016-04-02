@@ -42,7 +42,7 @@ All Simpla elements require a unique ID to identify their content in your projec
 Read [structuring data](#structuring-data) to learn more about how to scope and structure content in your project.
 
 ### Void vs. self-closing
-All of Simpla's elements act as _void_ elements, which means that you can't put anything inside them. The one exception to this is [default content](#default-content). However, they are _not_ self-closing, which means you need to include both opening and closing HTML tags.
+All of Simpla's elements act as _void_ elements, which means that you can't put anything inside them. However, they are _not_ self-closing, which means you need to include both opening and closing HTML tags.
 
 This is valid
 ```html
@@ -76,23 +76,21 @@ And the markup inside this won't get output
 
 <simpla-text sid="example" class="simpla-example"></simpla-text>
 
-### Inline vs. block mode
-Simpla-text has two content structuring modes:
-
-1. Block mode - new line creates `<p>`.
-
-2. Inline mode - new line creates `<br/>`.
-
-The mode is set automatically based on context. You can force a mode by adding a `block` or `inline` attribute to a `<simpla-text>` element.
+### Inline mode
+By default, simpla-text creates paragraphs for new lines of text. You can disable paragraphs and have new lines create `<br/>` line-breaks instead by setting the `inline` property on `<simpla-text>`.
 
 ```html
 <simpla-text sid="inline-text" inline></simpla-text>
-
-<simpla-text sid="block-text" block></simpla-text>
 ```
 <!-- {is="syntax-highlight"} -->
 
-Note that forcing block mode when simpla-text is used inside textual elements like headings will produce invalid markup and could result in unexpected behavior.
+Inline mode is automatically enabled when simpla-text is used inside other textual elements (eg: headings, links, paragraphs, spans).
+
+```html
+<!-- Inline mode automatically enabled inside other textual elements -->
+<h1><simpla-text sid="inline-text"></simpla-text></h1>
+```
+<!-- {is="syntax-highlight"} -->
 
 ### Placeholders
 Simpla-text shows a placeholder in edit mode when it has no content. You can change the default placeholder with the `placeholder` attribute
@@ -147,46 +145,6 @@ You can force a simpla-img to always pop into view when editing with the `popout
 <simpla-img sid="always-popout" popout></simpla-img>
 ```
 <!-- {is="syntax-highlight"} -->
-
-## Default content
-You can provide starting content for Simpla elements with default content. Default content is shown when a Simpla element cannot fetch data, ie: when you have yet to save content for it. If an element has content saved in your project, its default content is not used. An element's default content is never 'updated' by Simpla.
-
-Default content can be defined with `<default-content>` tags inside a Simpla element or in a `default` attribute on the element. While `<default-content>` tags can be used inside Simpla elements, the elements are still essentially _void_, other markup inside them is not output.
-
-### Default content for simpla-text
-To provide default content to simpla-text specify HTML rich-text in either internal `<default-content>` tags or the `default` attribute. The following are equivalent:
-
-```html
-<simpla-text sid="default" default="<p>Lorem ipsum dolor sit amet.</p>"></simpla-text>
-```
-<!-- {is="syntax-highlight"} -->
-
-```html
-<simpla-text sid="default">
-  <default-content>
-    <p>Lorem ipsum dolor sit amet.</p>
-  </default-content>
-</simpla-text>
-```
-<!-- {is="syntax-highlight"} -->
-
-<simpla-text sid="example" class="simpla-example" default="<p>Lorem ipsum dolor sit amet</p>"></simpla-text>
-
-### Default content for simpla-img
-To provide default content to simpla-img specify a path to an image in the `default` attribute.
-
-```html
-<simpla-img sid="default" default="/path/to/img.jpg"></simpla-img>
-```
-<!-- {is="syntax-highlight"} -->
-
-<simpla-img sid="example" class="simpla-example" default="/path/to/img.jpg"></simpla-img>
-
-### Using default content to convert static content
-Using default content, you can easily convert static HTML content to Simpla content. Just use your existing HTML markup as default content for Simpla elements, then open edit mode on your site and press save. All of your content will now be saved as Simpla content in your project, and you can safely remove the old HTML markup from your code.
-
-### Using default content as a fallback
-Default content can also act as an emergency fallback for Simpla elements. If Simpla's API is ever unreachable, elements will not be able to fetch data and will therefore show their default content. This strategy is only recommended if a) an element's content is unlikely to change significantly (eg: page titles), or b) you specifically use default content for '404 not found' type purposes.
 
 ## Structuring data <a is="populate-menu" anchor="structuring-data" menu-item="Structuring data" target="#developing">#</a>
 With Simpla your code determines the structure of your data, rather than the other way around. With a few simple tools you can create powerful data structures directly in your markup.
@@ -277,7 +235,7 @@ Simpla-blocks can use GIDs as well, to create globally unique namespaces.
 </simpla-block>
 
 <simpla-block sid="block">
-  
+
   <!-- This 'global-block' has the same data as the other 'global-block' -->
   <simpla-block gid="global-block">
     <simpla-text sid="foo"></simpla-text>
@@ -304,7 +262,7 @@ To achieve this you can place an `sid` on the `<body>` element, which creates a 
 ```
 <!-- {is="syntax-highlight"} -->
 
-**Note:** Currently setting an `sid` on body with the `.setAttribute()` method is not supported. If you want to set an sid with JavaScript use the following syntax:
+**Note:** Currently setting an `sid` on body using the `.setAttribute()` Javascript method is not supported. If you want to set an sid with Javascript use the following syntax:
 
 ```javascript
 document.body.sid = 'my-sid';
@@ -327,7 +285,7 @@ For example, you could use `<simpla-block>` to create a frontend blog
 ```
 <!-- {is="syntax-highlight"} -->
 
-Or change page namespaces with JavaScript for single page apps
+Or change page content with JavaScript for single page apps
 
 ```html
 <!-- Change the sid when page/route changes -->

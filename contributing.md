@@ -42,9 +42,6 @@ Connects an element to a RESTful API.
 ### [`sm-utility-placeholder`][utility-placeholder]
 Provides an interface for elements to create placeholder content.
 
-### [`default-content`][default-content]
-Provides interfaces for creating default content, specified inside an element in the user's markup.
-
 ### [`sm-utility-auth`][utility-auth]
 Provides an interface to Simpla's authentication and user-management system.
 
