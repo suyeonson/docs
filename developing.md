@@ -74,7 +74,7 @@ And the markup inside this won't get output
 ```
 <!-- {is="syntax-highlight"} -->
 
-<simpla-text sid="example" class="simpla-example"></simpla-text>
+<simpla-text sid="example" class="simpla-example" editable></simpla-text>
 
 ### Inline mode
 By default, simpla-text creates paragraphs for new lines of text. You can disable paragraphs and have new lines create `<br/>` line-breaks instead by setting the `inline` property on `<simpla-text>`.
@@ -110,7 +110,7 @@ Simpla-text shows a placeholder in edit mode when it has no content. You can cha
 ```
 <!-- {is="syntax-highlight"} -->
 
-<simpla-img sid="example" class="simpla-example"></simpla-img>
+<simpla-img sid="example" class="simpla-example" editable></simpla-img>
 
 ### Image sizing
 Simpla-img behaves in the same way as a regular `<img>`, with the size of uploaded content determining its dimensions. You can constrict the size of a `<simpla-img>` with CSS.
@@ -131,9 +131,9 @@ Simpla-img shows a placeholder in edit mode when it has no content. You can chan
 <!-- {is="syntax-highlight"} -->
 
 <div class="simpla-example">
-  <simpla-img sid="example" placeholder="http://placekitten.com/g/600/400"></simpla-img>
-  <simpla-img sid="example" placeholder="#64d8e8"></simpla-img>
-  <simpla-img sid="example" placeholder="pink"></simpla-img>
+  <simpla-img sid="example" placeholder="http://placekitten.com/g/600/400" editable></simpla-img>
+  <simpla-img sid="example" placeholder="#64d8e8" editable></simpla-img>
+  <simpla-img sid="example" placeholder="pink" editable></simpla-img>
 </div>
 
 ### Popout mode

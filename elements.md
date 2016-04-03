@@ -39,7 +39,7 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 ```
 <!-- {is="syntax-highlight"} -->
 
-<simpla-text sid="example" class="simpla-example"></simpla-text>
+<simpla-text sid="example" class="simpla-example" editable></simpla-text>
 
 | Attribute:    | `sid`                                                                 |
 |:--------------|:----------------------------------------------------------------------|
@@ -78,7 +78,7 @@ This is a reference guide for Simpla's user-facing content elements. There are m
 ```
 <!-- {is="syntax-highlight"} -->
 
-<simpla-img sid="example" class="simpla-example"></simpla-img>
+<simpla-img sid="example" class="simpla-example" editable></simpla-img>
 
 | Attribute:    | `sid`                                                                 |
 |:--------------|:----------------------------------------------------------------------|
