@@ -269,7 +269,7 @@ document.body.sid = 'my-sid';
 ```
 <!-- {is="syntax-highlight"} -->
 
-## Dynamically changing data  <a is="populate-menu" anchor="dynamic-content" menu-item="Dynamically changing content" target="#developing">#</a>
+## Dynamic content  <a is="populate-menu" anchor="dynamic-content" menu-item="Dynamic content" target="#developing">#</a>
 Whenever the Content ID of a Simpla element changes it re-fetches its data. And since an element's content is determined by the namespace it lives in (if it uses an SID), you can swap whole sections of content by changing the ID of its surrounding namespace.
 
 For example, you could use `<simpla-block>` to create a frontend blog
