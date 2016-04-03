@@ -267,6 +267,7 @@ To achieve this you can place an `sid` on the `<body>` element, which creates a 
 ```javascript
 document.body.sid = 'my-sid';
 ```
+<!-- {is="syntax-highlight"} -->
 
 ### Dynamically changing data
 Whenever the Content ID of a Simpla element changes it re-fetches its data. And since an element's content is determined by the namespace it lives in (if it uses an SID), you can swap whole sections of content by changing the ID of its surrounding namespace.
