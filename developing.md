@@ -4,7 +4,7 @@ Simpla lets you create editable content in plain HTML, by using new dynamic HTML
 Simpla is not a framework. It's a HTML library for editable content that can be used instead of a CMS, inside a CMS, or alongside whatever framework, backend, or platform you're already using.
 
 ## Installation and setup <a is="populate-menu" anchor="setup" menu-item="Installation and setup" target="#developing">#</a>
-Login to your Simpla dashboard and create a new project by pressing the _create project_ button. Every Simpla project has an API key that you use to connect to it.
+Login to your Simpla dashboard and create a new project by pressing the _+ new_ button. Every Simpla project has an API key that you use to connect to it.
 
 Include a script tag in the `<head>` of your HTML document with a `src` of `https://app.simpla.io` and an attribute called `simpla-api` containing your project's API key.
 
