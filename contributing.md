@@ -1,13 +1,11 @@
 # Contributing
 The Simpla elements are open-source under the MIT license. If you'd like to contribute, please head over to our GitHub repositories and dive in!
 
-**[github.com/simplaio/simpla][simplaio/simpla]** is the entrypoint to Simpla's open-source ecosystem and the package that is used to install the core Simpla elements locally with Bower.
+**[github.com/simplaio/simpla][simplaio/simpla]** is the entrypoint to Simpla's open-source ecosystem and the package that is used to install Simpla locally with Bower.
 
 **[github.com/SimplaElements][SimplaElements]** is Simpla's element catalogue. These elements are hosted on [elements.simpla.io][elements]
 
 **[github.com/simplaio][simplaio]** hosts Simpla's supporting repositories, like development tools and the aforementioned `simpla` Bower installer.
-
-**Note:** We are currently in the process of migrating Simpla's elements from _simplaio_ to the new _SimplaElements_ organization.
 
 [simplaio/simpla]: https://github.com/simplaio/simpla
 [SimplaElements]: https://github.com/SimplaElements
@@ -29,9 +27,9 @@ Contains editable rich-text.
 ### [`simpla-img`][simpla-img]
 An editable image.
 
-[simpla-block]: https://github.com/simplaio/simpla-block
-[simpla-text]: https://github.com/simplaio/simpla-text
-[simpla-img]: https://github.com/simplaio/simpla-img
+[simpla-block]: https://github.com/SimplaElements/simpla-block
+[simpla-text]: https://github.com/SimplaElements/simpla-text
+[simpla-img]: https://github.com/SimplaElements/simpla-img
 
 ## Utility components <a is="populate-menu" anchor="utility-components" menu-item="Utility components" target="#contributing">#</a>
 Utilities that are used throughout the Simpla ecosystem to provide shared behaviors and functionality.
@@ -45,10 +43,10 @@ Provides an interface for elements to create placeholder content.
 ### [`sm-utility-auth`][utility-auth]
 Provides an interface to Simpla's authentication and user-management system.
 
-[utility-connect]: https://github.com/simplaio/sm-utility-connect
-[utility-placeholder]: https://github.com/simplaio/sm-utility-placeholder
-[default-content]: https://github.com/simplaio/default-content
-[utility-auth]: https://github.com/simplaio/sm-utility-auth
+[utility-connect]: https://github.com/SimplaElements/sm-utility-connect
+[utility-placeholder]: https://github.com/SimplaElements/sm-utility-placeholder
+[default-content]: https://github.com/SimplaElements/default-content
+[utility-auth]: https://github.com/SimplaElements/sm-utility-auth
 
 ## UI components <a is="populate-menu" anchor="ui-components" menu-item="UI components" target="#contributing">#</a>
 Visual components that are used throughout the Simpla ecosystem to achieve a consistent UI.
@@ -69,10 +67,10 @@ A simple modal/dialog element.
 A flexible callout box with moveable pointer.
 
 [ui-core]: https://github.com/SimplaElements/sm-ui-core
-[ui-button]: https://github.com/simplaio/sm-ui-button
-[ui-toolbar]: https://github.com/simplaio/sm-ui-toolbar
-[ui-modal]: https://github.com/simplaio/sm-ui-modal
-[ui-callout]: https://github.com/simplaio/sm-ui-callout
+[ui-button]: https://github.com/SimplaElements/sm-ui-button
+[ui-toolbar]: https://github.com/SimplaElements/sm-ui-toolbar
+[ui-modal]: https://github.com/SimplaElements/sm-ui-modal
+[ui-callout]: https://github.com/SimplaElements/sm-ui-callout
 
 ## Modules <a is="populate-menu" anchor="modules" menu-item="Modules" target="#contributing">#</a>
 Modules provide independent functionality for Simpla, but aren't used directly by the user to create dynamic content.
@@ -86,9 +84,9 @@ A visual wrapper for `sm-utility-auth` to log a user in when entering edit mode.
 ### [`sm-module-notify`][module-notify]
 Simpla's notification centre. Handles all success, warning, and error messages by logging them and/or notifying with toasts
 
-[module-save]: https://github.com/simplaio/sm-module-save
-[module-login]: https://github.com/simplaio/sm-module-login
-[module-notify]: https://github.com/simplaio/sm-module-notify
+[module-save]: https://github.com/SimplaElements/sm-module-save
+[module-login]: https://github.com/SimplaElements/sm-module-login
+[module-notify]: https://github.com/SimplaElements/sm-module-notify
 
 ## Reporting issues
 If you find a bug, please report it! If you know which component in the ecosystem is causing the trouble, open a GitHub issue on the appropriate repository. Otherwise [let us know][contact] or open an issue on [simplaio/simpla][simplaio/simpla] and we can move it if need be.
