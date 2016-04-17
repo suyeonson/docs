@@ -1,7 +1,7 @@
 # Developing With Simpla
 Simpla lets you create editable content in plain HTML, by using new dynamic HTML elements like `<simpla-text>` and `<simpla-img>`. Authenticated users can permanently edit the _content_ of these new elements on your site. Each element talks independently to a RESTful API to save and fetch content in your project.
 
-Simpla is not a framework. It's a HTML library for editable content that can be used instead of a CMS, inside a CMS, or alongside whatever framework, backend, or platform you're already using.
+Simpla is not a framework. It's an open content management ecosystem that can be used instead of a CMS, inside a CMS, or alongside whatever framework, backend, or platform you're already using.
 
 ## Installation and setup <a is="populate-menu" anchor="setup" menu-item="Installation and setup" target="#developing">#</a>
 Login to your Simpla dashboard and create a new project by pressing the _+ new_ button. Every Simpla project has an API key that you use to connect to it.
