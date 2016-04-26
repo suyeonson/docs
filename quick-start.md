@@ -29,7 +29,7 @@ All Simpla elements must have an `sid` (Simpla ID) attribute containing a unique
 
 ```html
 <simpla-text sid="my-text"></simpla-text>
-<simpla-img sid="my-img"></simpla-text>
+<simpla-img sid="my-img"></simpla-img>
 ```
 <!-- {is="syntax-highlight"} -->
 
