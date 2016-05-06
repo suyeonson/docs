@@ -3,14 +3,17 @@ Simpla lets you create editable content anywhere by using new dynamic HTML eleme
 
 [download sample template](https://github.com/simplaio/sample-template/archive/master.zip) <!-- {.button} -->
 
-### Create a project
-Login to your dashboard at [simpla.io/projects](https://www.simpla.io/projects) and create a new project by pressing the _+ new_ button.
+### Installation and setup
+Login to your dashboard at [simpla.io/projects](https://www.simpla.io/projects) and create a new project by pressing the _+ new_ button. Take note of your projects _API Key_.
 
-### Insert code snippet
-Put a script tag in the `<head>` of your HTML document with a `src` of `https://app.simpla.io` and an attribute called `simpla-api` containing your project's API key.
+Link the Simpla library in to the `<head>` of your HTML document from `https://app.simpla.io`, and start it with your project's API key by calling the `Simpla()` function.
 
 ```html
-<script src="https://app.simpla.io" simpla-api="PROJECT-API-KEY"></script>
+<script src="https://app.simpla.io"></script>
+<script>
+    // Setup Simpla
+    Simpla('PROJECT-KEY');
+</script>
 ```
 <!-- {is="syntax-highlight"} -->
 

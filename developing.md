@@ -6,14 +6,18 @@ Simpla is not a framework. It's an open content management ecosystem that can be
 ## Installation and setup <a is="populate-menu" anchor="setup" menu-item="Installation and setup" target="#developing">#</a>
 Login to your Simpla dashboard and create a new project by pressing the _+ new_ button. Every Simpla project has an API key that you use to connect to it.
 
-Include a script tag in the `<head>` of your HTML document with a `src` of `https://app.simpla.io` and an attribute called `simpla-api` containing your project's API key.
+Link the Simpla library in to the `<head>` of your HTML document from `https://app.simpla.io`, and start it with your project's API key by calling the `Simpla()` function.
 
 ```html
-<script src="https://app.simpla.io" simpla-api="PROJECT-API-KEY"></script>
+<script src="https://app.simpla.io"></script>
+<script>
+    // Setup Simpla
+    Simpla('PROJECT-KEY');
+</script>
 ```
 <!-- {is="syntax-highlight"} -->
 
-This will hotlink Simpla's library from our high performance global CDN ([Akamai](https://akamai.com)). Alternatively, you can install Simpla locally with [Bower](https://bower.com).
+This will hotlink Simpla's library from our high performance global CDN. Alternatively, you can install Simpla locally with [Bower](https://bower.com).
 
 ```bash
 $ bower install simpla --save
@@ -23,9 +27,29 @@ $ bower install simpla --save
 And include `simpla/simpla.js` from Bower instead
 
 ```html
-<script src="/bower_components/simpla/simpla.js" simpla-api="PROJET-API-KEY"></script>
+<script src="/bower_components/simpla/simpla.js"></script>
+<script>
+    // Setup Simpla
+    Simpla('PROJECT-KEY');
+</script>
 ```
 <!-- {is="syntax-highlight"} -->
+
+You can also host Simpla's elements locally, which is required if you are working with other web components (ie: [Google Polymer](https://polymer-project.org)) in your project. Just install them with Bower, then change which base path Simpla uses to load in your elements. If you're not using Polymer locally we highly recommend pulling in Simpla's elements from our high performance CDN at `https://elements.simpla.io` instead.
+
+```bash
+$ bower install --save SimplaElements/simpla-text SimplaElements/simpla-img SimplaElements/simpla-block SimplaElements/sm-admin
+```
+
+```javascript
+Simpla({
+  project: 'PROJECT-KEY',
+  elements: {
+    base: '/bower_components/'
+  }
+});
+```
+
 
 ## Using Simpla elements <a is="populate-menu" anchor="using-elements" menu-item="Using the elements" target="#developing">#</a>
 Simpla's new elements exist as legitimate HTML on your site. You can do everything with them that you would with regular HTML. You can select them, style them, and manipulate them. You can see them in your browser's web inspector. This is possible thanks to a family of emerging specifications called [Web Components](https://www.w3.org/wiki/WebComponents/), which let us register custom HTML elements on a web page.
