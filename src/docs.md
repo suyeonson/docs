@@ -1,4 +1,9 @@
-@@include('lib/_quick-start.md');
-@@include('lib/_developing.md');
-@@include('lib/_elements.md');
-@@include('lib/_contributing.md');
+@@include('./partials/_quick-start.md')
+@@include('./partials/_concepts.md')
+@@include('./partials/_setup.md')
+@@include('./partials/_text.md')
+@@include('./partials/_img.md')
+@@include('./partials/_structuring-data.md')
+@@include('./partials/_js-sdk.md')
+@@include('./partials/_contributing.md')
+@@include('./partials/_browser-support.md')
