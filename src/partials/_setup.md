@@ -67,7 +67,7 @@ Simpla is configurable via the `Simpla()` constructor. You can even define your 
 
 **`project`**
 
-Every Simpla project has an API key associated to it. Simpla can't fetch or save data without a valid project key defined.
+Every Simpla project has an API key associated with it. Simpla can't fetch or save data without a valid project key defined.
 
 **`elements`**
 
@@ -88,7 +88,7 @@ Simpla({
 
 Simpla's HTML elements need to be loaded onto your page before you can use them. The `elements` property takes either an array of full paths to elements, or an object with a `base` url and an array of relative `paths`.
 
-**Note:** All elements _must_ be loaded from the same place, otherwise dependencies wont be properly resolved.
+**Note:** All elements _must_ be loaded from the same place, otherwise dependencies won't be properly resolved.
 
 ## Hosting elements locally
 
@@ -110,6 +110,6 @@ Simpla({
 });
 ```
 
-If you're working with [Polymer](https://www.polymer-project.org) serve Simpla's elements locally to avoid dependancy conflicts. Install them with Bower then change the `base` property to your bower components directory.
+If you're working with [Polymer](https://www.polymer-project.org), serve Simpla's elements locally to avoid dependancy conflicts. Install them with Bower then change the `base` property to your bower components directory.
 
 **Note:** If possible, hotlinking from Simpla's element CDN (`elements.simpla.io`) is highly recommended, since it multiplexes requests over HTTP/2.
