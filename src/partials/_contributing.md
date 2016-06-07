@@ -12,7 +12,7 @@ Simpla's element catalogue, hosted on [elements.simpla.io][elements]
 [elements]: https://elements.simpla.io
 
 ### The ecosystem
-The bulk of Simpla's functionality comes from elements in the ecosystem, each talking independantly to Simpla's API.
+The bulk of Simpla's functionality comes from elements in the ecosystem, each talking independently to Simpla's API.
 
 ## Simpla elements
 These are the new dynamic HTML elements themselves, use them in your code to create, structure, and manipulate content.
@@ -58,7 +58,7 @@ A flexible callout box with moveable pointer.
 Modules provide independent functionality for Simpla, but aren't used directly by the user to create dynamic content.
 
 ### [`sm-module-save`][module-save]
-Contains the UI and logic that requests all elements save their data back to the API.
+Contains the UI and logic that request all elements save their data back to the API.
 
 ### [`sm-module-login`][module-login]
 Contains the UI and logic to log a user in when entering edit mode.
