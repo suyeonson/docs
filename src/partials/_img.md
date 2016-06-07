@@ -7,16 +7,16 @@ Simpla-img is an editable image
 <simpla-img sid="img"></simpla-img>
 ```
 
-`<simpla-img>` is an editable image. Use it in place of static the HTML `<img>` element.
+`<simpla-img>` is an editable image. Use it in place of the static HTML `<img>` element.
 
 <simpla-img sid="example" class="simpla-example" editable></simpla-img>
 
-**Note:** Currently setting `width` and `height` attributes directly on a `<simpla-img>` is not supported, sizing must be done via CSS.
+**Note:** Currently setting `width` and `height` attributes directly on a `<simpla-img>` is not supported. Sizing must be done via CSS.
 
 ## Options
 
 ### Popout mode
-If a `<simpla-img>` is partially off-screen whilst editing it will 'pop' into view when clicked.
+If a `<simpla-img>` is partially off-screen whilst editing, it will 'pop' into view when clicked.
 
 ```comment
 Force a simpla-img to always popout
